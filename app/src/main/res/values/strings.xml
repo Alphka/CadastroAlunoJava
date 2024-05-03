@@ -1,0 +1,22 @@
+<resources>
+	<string name="app_name">Cadastro</string>
+	<string name="studentsActivityTitle">Cadastro de alunos</string>
+	<string name="studentsTitle">Cadastros de alunos</string>
+	<string name="mastersActivityTitle">Cadastro de professores</string>
+	<string name="mastersTitle">Cadastros de professores</string>
+	<string name="name">Nome</string>
+	<string name="address">Endereço</string>
+	<string name="city">Cidade</string>
+	<string name="state">Estado</string>
+	<string name="zip">CEP</string>
+	<string name="phoneNumber">Número de telefone</string>
+	<string name="clear">Limpar</string>
+	<string name="add">Adicionar</string>
+	<string name="save">Salvar</string>
+	<string name="registerStudent">Cadastrar Aluno</string>
+	<string name="registerTeacher">Cadastrar Professor</string>
+	<string name="seeRegisters">Ver Cadastros</string>
+	<string name="registers">Cadastros</string>
+	<string name="clearedFields">Todos os campos foram limpos</string>
+	<string name="addedUser">Usuário adicionado</string>
+</resources>
