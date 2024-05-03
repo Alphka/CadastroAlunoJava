@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class Registers extends AppCompatActivity {
-	private static final String TAG = "Registers";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,17 +39,14 @@ public class Registers extends AppCompatActivity {
 			title.setTextSize(24);
 			title.setTypeface(null, Typeface.BOLD);
 			title.setText(titleString);
+			title.setPadding(60, 40, 0, 0);
 			layout.addView(title);
 		}
 
 		Resources resources = getResources();
 
 		for(int id = 0; id < lastId; id++){
-			Log.d(TAG, String.format("Accessing shared preferences: %s, ID: %s", globalKey, lastId));
-
 			SharedPreferences preferences = getSharedPreferences(globalKey + "-" + id, MODE_PRIVATE);
-
-			Log.d(TAG, "Creating text views");
 
 			TextView nomeTextview = new TextView(this),
 			enderecoTextview = new TextView(this),
@@ -59,8 +55,6 @@ public class Registers extends AppCompatActivity {
 			cidadeTextview = new TextView(this),
 			estadoTextview = new TextView(this);
 
-			Log.d(TAG, "Setting text views styles");
-
 			nomeTextview.setTextSize(20);
 			enderecoTextview.setTextSize(20);
 			numeroTextview.setTextSize(20);
@@ -68,7 +62,13 @@ public class Registers extends AppCompatActivity {
 			cidadeTextview.setTextSize(20);
 			estadoTextview.setTextSize(20);
 
-			Log.d(TAG, "Setting text from shared preferences");
+			nomeTextview.setPadding(60, 20, 0, 0);
+			nomeTextview.setPadding(60, 0, 0, 0);
+			enderecoTextview.setPadding(60, 0, 0, 0);
+			numeroTextview.setPadding(60, 0, 0, 0);
+			cepTextview.setPadding(60, 0, 0, 0);
+			cidadeTextview.setPadding(60, 0, 0, 0);
+			estadoTextview.setPadding(60, 0, 0, 40);
 
 			nomeTextview.setText(resources.getString(R.string.name) + ": " + preferences.getString("nome", ""));
 			enderecoTextview.setText(resources.getString(R.string.address) + ": " + preferences.getString("endereco", ""));
@@ -76,8 +76,6 @@ public class Registers extends AppCompatActivity {
 			cepTextview.setText(resources.getString(R.string.zip) + ": " + preferences.getString("cep", ""));
 			cidadeTextview.setText(resources.getString(R.string.city) + ": " + preferences.getString("cidade", ""));
 			estadoTextview.setText(resources.getString(R.string.state) + ": " + preferences.getString("estado", ""));
-
-			Log.d(TAG, "Adding view to the layout");
 
 			layout.addView(nomeTextview);
 			layout.addView(enderecoTextview);

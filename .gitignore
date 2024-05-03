@@ -32,6 +32,7 @@ local.properties
 /.idea/workspace.xml
 /.idea/modules.xml
 /.idea/tasks.xml
+/.idea/misc.xml
 /.idea/migrations.xml
 /.idea/compiler.xml
 /.idea/navEditor.xml
